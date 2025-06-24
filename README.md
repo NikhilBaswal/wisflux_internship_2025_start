@@ -15,4 +15,4 @@ College: SKIT, Jaipur
 Branch: Artificial Intelligence
 Goal: To work in a top-level position at a multinational company
 Hobbies: Cricket 🏏 | Volleyball 🏐 | Basketball 🏀
-LinkedIn: linkedin.com/in/nikhil-baswal-5bb835315
+
