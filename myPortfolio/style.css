@@ -1,0 +1,74 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f2027;
+      color: #fff;
+      position: relative;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    h1 { font-size: 3em; margin-bottom: 10px; }
+    h2 { font-size: 2em; margin-top: 40px; text-align: center; }
+    p { line-height: 1.6; }
+
+    section { max-width: 1000px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
+
+    .skills {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    }
+    .skill {
+      background: rgba(255,255,255,0.1);
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .skill:hover { transform: scale(1.1); }
+
+    .timeline {
+      border-left: 2px solid #fff;
+      padding-left: 20px;
+    }
+    .timeline-item {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      width: 15px; height: 15px;
+      background: #00c6ff;
+      border-radius: 50%;
+      position: absolute;
+      left: -9px; top: 5px;
+    }
+
+    .chatbox {
+      max-width: 500px; margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+    }
+    .chatlog { min-height: 100px; margin-bottom: 10px; }
+    .chatlog p { margin: 5px 0; }
+    .chatinput {
+      width: 100%; padding: 10px;
+      border: none; border-radius: 8px;
+    }
+
+    form, .chatinput { font-size: 1em; }
+
+    #particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
