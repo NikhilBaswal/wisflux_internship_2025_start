@@ -1,0 +1,239 @@
+       @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #8B0000 0%, #A0001A 50%, #690000 100%);
+            min-height: 100vh;
+        }
+        
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            padding: 0 60px;
+            color: #fff;
+        }
+        
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 8vw, 8rem);
+            font-weight: 300;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+        
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+            font-weight: 200;
+            letter-spacing: 0.05em;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        
+        .hero-description {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1.1rem, 1.8vw, 1.2rem);
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            opacity: 0.8;
+            animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid #fff;
+            padding: 18px 40px;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.9s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255,255,255,0.2);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .decorative-lines {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 2px;
+            z-index: 0;
+        }
+        
+        .decorative-lines::before,
+        .decorative-lines::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.2);
+            animation: expandLine 2s cubic-bezier(0.23, 1, 0.32, 1) 1.5s forwards;
+            width: 0;
+        }
+        
+        .decorative-lines::before {
+            top: 0;
+            left: 0;
+        }
+        
+        .decorative-lines::after {
+            bottom: 0;
+            right: 0;
+        }
+        
+        @keyframes expandLine {
+            to {
+                width: 100px;
+            }
+        }
+        
+     
+/* Luxury Navigation Bar */
+.lux-nav {
+  margin:auto;
+  width:400px;
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left:50%;
+  transform:translateX(-50%);
+  z-index: 999;
+}
+
+/* Navigation Links */
+.lux-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  position: relative;
+  text-transform:uppercase;
+}
+
+.lux-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+
+.lux-nav a:hover::after {
+  width: 100%;
+}
+
+.lux-nav a:hover {
+  color: #fff; 
+}
+
+   @media (max-width: 768px) {
+     .lux-nav {
+       width:auto;
+     }
+            .content {
+                padding: 0 30px;
+            }
+            
+            .hero-title {
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-subtitle {
+                margin-bottom: 2rem;
+            }
+            
+            .hero-description {
+                margin-bottom: 3rem;
+            }
+        }
