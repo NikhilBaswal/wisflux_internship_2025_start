@@ -35,7 +35,17 @@ app.get('/second',(req,res)=>{
   // res.send(" angdo bangdo")             //   res.send and res.render ek saath nhi chal rahe hai, koi ek hi chalega
   res.render("second",{age:"thirteen"})
 })
-
+app.get('/error',(req,res)=>{
+  throw Error("something went wrong")
+})
+app.use(function errorHandler (err, req, res, next) {
+  if (res.headersSent) {
+    return next(err)
+  }
+  res.status(500)
+  res.render('error', { error: err })
+}
+)
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
